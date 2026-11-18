@@ -1,30 +1,28 @@
-# Campus Survivor: Enschede Edition — Sprint 2
+# Campus Survivor: Enschede Edition — Release 2
 
-Based on the original Saxion GameApp Gradle template and the Sprint 1 project.
+Complete vernieuwde Java-game op basis van SaxionGameApp.
 
-## Run
-- Windows: `gradlew.bat run`
-- macOS/Linux: `chmod +x gradlew && ./gradlew run`
+## Release 2
+- Geïllustreerde 2.5D-kaart van Enschede met zeven locaties en ingangen.
+- Pixel-art hoofdpersonage en 12 NPC's.
+- Groene ingang-iconen die oplichten als de speler dichtbij komt.
+- WASD: vrij bewegen op de kaart; E: gebouw binnengaan of NPC aanspreken.
+- Foto-interieurs, 21 missies, statistieken, examens en gebeurtenissen.
+- TAB: kaartoverzicht; Q: gebouw verlaten; 1/2/3: missies; 4: slapen in de flat.
 
-## Controls
-- WASD / arrows: move; E: talk to nearby NPC; P: pause; ESC: menu.
-- **1** near Saxion entrance: study for 2 in-game hours.
-- **2** near student flat entrance: sleep for 8 in-game hours.
-- **3** near shops entrance: work for 4 in-game hours.
-- **4** near Oude Markt entrance: go out for 3 in-game hours.
+## Starten (Windows)
+Open een terminal in deze map en voer uit:
 
-Entrances are the walkable path tiles in the middle of each building's street-facing edge. Walk near the entrance and read the bottom HUD hint. Actions skip game time and affect energy, money, stress, knowledge, alcohol and popularity. Low energy prevents studying or working; going out requires money. Alcohol reduces studying efficiency and may damage popularity; NPCs react to high alcohol and popularity.
+    .\gradlew.bat run
 
-## Sprint 2 scope
-Implements the Plan van Aanpak Sprint 2 must-haves: studying, working, sleeping, going out and consequences of alcohol/reputation. Sprint 3 (exams, random events, multiple endings) is not included.
+## Git: Release 2 naast Sprint 2 bewaren
+Gebruik de **oude repository met zijn bestaande .git-map**. Maak daar eerst een
+nieuwe branch `release-v2` en kopieer vervolgens de inhoud van deze map naar
+de oude repository. Kopieer nooit een andere `.git`-map mee.
+Zie `GIT-RELEASE-2-INSTRUCTIES.md` voor een veilig stappenplan.
 
-## Testing
-The ZIP structure and Java source checks are performed, but a full Gradle compilation/runtime is not guaranteed. Test on your own machine and report compiler/runtime errors if encountered.
-
-## Visual map upgrade — 2.5D edition
-The Sprint 2 map now has layered roof/facade building art, window patterns, shadows, trees, road markings, plaza details, labeled landmarks and highlighted activity entrances. Saxion, student flat, Kennispark, Centrum, Oude Markt and shops/work are all visible. The underlying collision map and Sprint 2 interactions are preserved.
-
-**Accuracy:** This is an original stylized Enschede-inspired game map, **not** a geographically accurate street map or photorealistic 3D model. It uses 2.5D-looking 2D shapes in the existing SaxionGameApp framework. A true 3D Enschede replica would require a different renderer and licensed/geospatial map or model assets.
-
-## Sprint 3 HUD fix
-The HUD uses smaller fonts, splits statistics into two lines, moves exam progress into the top bar, and uses smaller map labels. The menu fonts are also reduced. No gameplay systems were removed.
+## Opmerkingen
+De kaart is een artistieke reconstructie en geen geografisch exacte plattegrond.
+De interactieve posities zijn handmatig afgestemd. De game is in deze omgeving
+niet volledig gecompileerd of live getest.
+Oudere ontwikkelnotities staan in `docs/ontwikkeling/`.
